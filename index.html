@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Clinical Editorial - الرعاية الطبية الاحترافية</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      document.title = "Clinical Les Orangers - Accueil";
+    </script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#8ad0f1",
+                    "secondary-container": "#98deff",
+                    "tertiary": "#0e191c",
+                    "on-primary-container": "#7594ca",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-primary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "surface-bright": "#f7f9fb",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-fixed-variant": "#3d494c",
+                    "outline-variant": "#c4c6d0",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#001b3d",
+                    "on-secondary-container": "#056380",
+                    "on-secondary-fixed-variant": "#004d65",
+                    "secondary": "#0d6683",
+                    "tertiary-fixed-dim": "#bdc9cc",
+                    "surface-tint": "#405f91",
+                    "inverse-primary": "#a9c7ff",
+                    "on-tertiary-fixed": "#121d20",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary-fixed": "#bee9ff",
+                    "inverse-surface": "#2d3133",
+                    "tertiary-fixed": "#d9e5e8",
+                    "tertiary-container": "#232e31",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#002b5b",
+                    "on-surface-variant": "#43474f",
+                    "primary-fixed": "#d6e3ff",
+                    "outline": "#747780",
+                    "on-error-container": "#93000a",
+                    "primary": "#001736",
+                    "on-primary-fixed-variant": "#264778",
+                    "on-secondary-fixed": "#001f2a",
+                    "background": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#a9c7ff",
+                    "on-surface": "#191c1e",
+                    "error": "#ba1a1a",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-container": "#8a9599"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        html { scroll-behavior: smooth; }
+        .nav-link {
+            position: relative;
+            padding-bottom: 0.25rem;
+        }
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            border-radius: 9999px;
+            background-color: #0d6683;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s ease;
+        }
+        .nav-link-active::after {
+            transform: scaleX(1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7f9fb]/70 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-bold text-primary tracking-tighter">
+                Clinical Les Orangers
+            </div>
+<div class="hidden md:flex gap-8 items-center" id="main-nav-links">
+<a class="nav-link nav-link-active font-['Manrope'] font-semibold tracking-tight text-secondary transition-colors duration-300" data-nav-link="" href="#home">Accueil</a>
+<a class="nav-link font-['Manrope'] font-semibold tracking-tight text-primary/70 hover:text-secondary transition-colors duration-300" data-nav-link="" href="#specialties">Specialites</a>
+<a class="nav-link font-['Manrope'] font-semibold tracking-tight text-primary/70 hover:text-secondary transition-colors duration-300" data-nav-link="" href="#doctors">Nos medecins</a>
+<a class="nav-link font-['Manrope'] font-semibold tracking-tight text-primary/70 hover:text-secondary transition-colors duration-300" data-nav-link="" href="#patients">Services</a>
+<a class="nav-link font-['Manrope'] font-semibold tracking-tight text-primary/70 hover:text-secondary transition-colors duration-300" data-nav-link="" href="#about">A propos</a>
+</div>
+<a class="bg-primary text-on-primary px-8 py-3 rounded-full font-semibold scale-95 active:opacity-80 transition-all inline-flex items-center justify-center" href="role.html">Prendre RDV</a>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface py-20 lg:py-32 scroll-mt-28" id="home">
+<div class="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2 space-y-8">
+<span class="inline-block px-4 py-1.5 rounded-sm bg-secondary-fixed text-on-secondary-fixed-variant text-sm font-bold tracking-widest uppercase">Expert Medical Care</span>
+<h1 class="text-5xl lg:text-7xl font-extrabold text-primary leading-[1.1] tracking-tight">Votre santé mérite un parcours plus clair, plus fluide et plus humain</h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">Nous combinons technologie médicale avancée et touche humaine pour offrir une expérience de soins de santé personnalisée et unique.</p>
+<div class="flex gap-4">
+<a class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-shadow inline-flex items-center justify-center" href="#contact">Commencer</a>
+<a class="bg-surface-container-high text-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-surface-container-highest transition-colors inline-flex items-center justify-center" href="#specialties">Voir les Spécialités</a>
+</div>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] opacity-40">
+<div class="absolute inset-0 bg-gradient-to-tr from-secondary-container/30 via-transparent to-primary-container/20 rounded-full blur-[100px]"></div>
+<div class="absolute top-1/4 right-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-[80px]"></div>
+</div>
+<div class="relative z-10 p-4 lg:p-8">
+<div class="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent rounded-[2.5rem] backdrop-blur-[2px] border border-white/20 shadow-2xl shadow-primary/5"></div>
+<img alt="3D friendly doctor" class="relative z-10 w-full h-auto object-cover rounded-[2rem] drop-shadow-2xl" data-alt="High-quality 3D render of a friendly professional male doctor in a white coat with a stethoscope around his neck, clean minimal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMOfYLzJ-CZMdmmSqUHLA-I_A6CGz9YvL9Tr1qdHou8w_oG6HF3t04fAxXgdyke_z6cWLAT0vXaS-ygSKmEXFGvWgQ3lW8i-as-3TrNr2bXAW60eww7kPG0_gBarkAFDGf45SDfFwNEGI-tsLZ4vKUTNB8g7__ylXLCnSVcwrTve1xy384M8OaCMOYKEn4QCYX4B9Qa0EN_t687wS_kLlnEV44PB4VjS7yMDBM7Y96GDHOaIIk_mNLa9wVad27LDS7bK2dZ0lXQO12"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="bg-surface-container-low py-12">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center space-y-1 border-l last:border-l-0 border-outline-variant/30">
+<div class="text-4xl font-extrabold text-primary">98%</div>
+<div class="text-sm font-semibold text-on-secondary-fixed-variant uppercase tracking-wider">Satisfaction</div>
+</div>
+<div class="text-center space-y-1 border-l last:border-l-0 border-outline-variant/30">
+<div class="text-4xl font-extrabold text-primary">12 min</div>
+<div class="text-sm font-semibold text-on-secondary-fixed-variant uppercase tracking-wider">Temps d'attente</div>
+</div>
+<div class="text-center space-y-1 border-l last:border-l-0 border-outline-variant/30">
+<div class="text-4xl font-extrabold text-primary">500+</div>
+<div class="text-sm font-semibold text-on-secondary-fixed-variant uppercase tracking-wider">Médecins experts</div>
+</div>
+<div class="text-center space-y-1 border-l last:border-l-0 border-outline-variant/30">
+<div class="text-4xl font-extrabold text-primary">24/7</div>
+<div class="text-sm font-semibold text-on-secondary-fixed-variant uppercase tracking-wider">Soins 24/7</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Department Grid -->
+<section class="py-24 bg-surface scroll-mt-28" id="specialties">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="space-y-4">
+<h2 class="text-4xl font-bold text-primary tracking-tight">Nos Spécialités</h2>
+<div class="h-1.5 w-24 bg-secondary rounded-full"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Cardiology -->
+<div class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-[0px_20px_40px_rgba(0,27,54,0.06)] transition-all group">
+<div class="w-14 h-14 bg-secondary-fixed rounded-lg flex items-center justify-center mb-6 text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="cardiology">cardiology</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Cardiologie</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Diagnostic et traitement des maladies cardiovasculaires avec les équipements les plus récents.</p>
+<a class="text-secondary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#contact">
+                            Discover <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Pneumology -->
+<div class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-[0px_20px_40px_rgba(0,27,54,0.06)] transition-all group">
+<div class="w-14 h-14 bg-secondary-fixed rounded-lg flex items-center justify-center mb-6 text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="air">air</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Pneumologie</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Soins respiratoires complets et traitement de l'asthme et des allergies.</p>
+<a class="text-secondary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#contact">
+                            Discover <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Dental -->
+<div class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-[0px_20px_40px_rgba(0,27,54,0.06)] transition-all group">
+<div class="w-14 h-14 bg-secondary-fixed rounded-lg flex items-center justify-center mb-6 text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="dentistry">dentistry</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Dentaire</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Services dentaires esthétiques et thérapeutiques pour toute la famille.</p>
+<a class="text-secondary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#contact">
+                            Discover <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Nephrology -->
+<div class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-[0px_20px_40px_rgba(0,27,54,0.06)] transition-all group">
+<div class="w-14 h-14 bg-secondary-fixed rounded-lg flex items-center justify-center mb-6 text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="nephrology">nephrology</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Néphrologie</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Gestion spécialisée de la fonction rénale et traitements de dialyse avancés.</p>
+<a class="text-secondary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#contact">
+                            Discover <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Neurology -->
+<div class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-[0px_20px_40px_rgba(0,27,54,0.06)] transition-all group">
+<div class="w-14 h-14 bg-secondary-fixed rounded-lg flex items-center justify-center mb-6 text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="neurology">neurology</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Neurologie</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Diagnostic et traitement des troubles du système nerveux et du cerveau.</p>
+<a class="text-secondary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#contact">
+                            Discover <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Orthopedics -->
+<div class="bg-surface-container-lowest p-8 rounded-xl hover:shadow-[0px_20px_40px_rgba(0,27,54,0.06)] transition-all group">
+<div class="w-14 h-14 bg-secondary-fixed rounded-lg flex items-center justify-center mb-6 text-on-secondary-container">
+<span class="material-symbols-outlined text-3xl" data-icon="orthopedics">orthopedics</span>
+</div>
+<h3 class="text-xl font-bold text-primary mb-3">Orthopédie</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Soins spécialisés des os, des articulations et des blessures sportives.</p>
+<a class="text-secondary font-bold text-sm flex items-center gap-2 group-hover:gap-4 transition-all" href="#contact">
+                            Discover <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Doctors Section -->
+<section class="py-24 bg-surface-container-low scroll-mt-28" id="doctors">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="space-y-4">
+<h2 class="text-4xl font-bold text-primary tracking-tight">Nos Medicine</h2>
+<div class="h-1.5 w-24 bg-secondary rounded-full"></div>
+</div>
+
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm space-y-4">
+<h3 class="text-2xl font-bold text-primary">Dr. Sophie Martin</h3>
+<p class="text-secondary font-semibold">Cardiologue</p>
+<p class="text-on-surface-variant">Suivi cardiovasculaire rigoureux, bilans préventifs complets et prise en charge adaptée à chaque patient.
+</p>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded-full font-semibold" href="#contact">Prendre rendez-vous</a>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm space-y-4">
+<h3 class="text-2xl font-bold text-primary">Dr. Karim Bensaid</h3>
+<p class="text-secondary font-semibold">Neurologue</p>
+<p class="text-on-surface-variant">Diagnostic approfondi des troubles neurologiques, accompagné d’un suivi attentif et continu.
+</p>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded-full font-semibold" href="#contact">Prendre rendez-vous</a>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-sm space-y-4">
+<h3 class="text-2xl font-bold text-primary">Dr. Lina Rahmani</h3>
+<p class="text-secondary font-semibold">Dentiste</p>
+<p class="text-on-surface-variant">Soins dentaires esthétiques et thérapeutiques, adaptés aussi bien aux adultes qu’aux enfants.
+</p>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded-full font-semibold" href="#contact">Prendre rendez-vous</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Highlight -->
+<section class="py-24 bg-surface-container-low scroll-mt-28" id="patients">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20 space-y-4">
+<h2 class="text-4xl font-bold text-primary tracking-tight">Des services de classe mondiale pour vous et votre famille</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Nous nous engageons à fournir les plus hauts niveaux de soins de santé grâce à nos installations de pointe.</p>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
+<!-- Radiology -->
+<div class="bg-surface-container-lowest p-10 rounded-3xl text-center space-y-4 shadow-sm">
+<div class="w-16 h-16 bg-surface-container mx-auto rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="radiology">radiology</span>
+</div>
+<h3 class="text-xl font-bold text-primary">Radiologie</h3>
+<p class="text-sm text-on-surface-variant">Techniques d'imagerie précises et rapides</p>
+</div>
+<!-- Emergency -->
+<div class="bg-surface-container-lowest p-10 rounded-3xl text-center space-y-4 shadow-sm">
+<div class="w-16 h-16 bg-surface-container mx-auto rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="emergency">emergency</span>
+</div>
+<h3 class="text-xl font-bold text-primary">Urgences</h3>
+<p class="text-sm text-on-surface-variant">Réponse immédiate 24 heures sur 24</p>
+</div>
+<!-- Labs -->
+<div class="bg-surface-container-lowest p-10 rounded-3xl text-center space-y-4 shadow-sm">
+<div class="w-16 h-16 bg-surface-container mx-auto rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="biotech">biotech</span>
+</div>
+<h3 class="text-xl font-bold text-primary">Laboratoires</h3>
+<p class="text-sm text-on-surface-variant">Résultats précis aux normes internationales</p>
+</div>
+<!-- Pharmacy -->
+<div class="bg-surface-container-lowest p-10 rounded-3xl text-center space-y-4 shadow-sm">
+<div class="w-16 h-16 bg-surface-container mx-auto rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="pharmacy">local_pharmacy</span>
+</div>
+<h3 class="text-xl font-bold text-primary">Pharmacie</h3>
+<p class="text-sm text-on-surface-variant">Disponibilité de tous les médicaments et produits</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-24 bg-surface scroll-mt-28" id="contact">
+<div class="max-w-5xl mx-auto px-8">
+<div class="bg-primary p-12 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="space-y-4 relative z-10">
+<h2 class="text-3xl font-bold text-on-primary">Obtenez une première consultation gratuite</h2>
+<p class="text-on-primary-container">Notre équipe est prête à répondre à vos questions de santé à tout moment.</p>
+</div>
+<div class="flex gap-4 relative z-10">
+<a class="bg-on-primary text-primary px-10 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all inline-flex items-center justify-center text-center" href="mailto:infomasten@gmail.com">Contactez-nous</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-low text-primary scroll-mt-28" id="about">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-8"><a class="text-primary/60 hover:underline hover:text-secondary transition-opacity" href="#">Politique de confidentialité</a><a class="text-primary/60 hover:underline hover:text-secondary transition-opacity" href="#">Conditions d'utilisation</a><a class="text-primary/60 hover:underline hover:text-secondary transition-opacity" href="#">Accessibilité</a><a class="text-primary/60 hover:underline hover:text-secondary transition-opacity" href="#">Contactez-nous</a></div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = Array.from(document.querySelectorAll('[data-nav-link]'));
+
+            function setActiveLink(targetHash) {
+                const activeHash = targetHash || '#home';
+
+                navLinks.forEach(function (link) {
+                    const isActive = link.getAttribute('href') === activeHash;
+                    link.classList.toggle('nav-link-active', isActive);
+                    link.classList.toggle('text-secondary', isActive);
+                    link.classList.toggle('text-primary/70', !isActive);
+                });
+            }
+
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    setActiveLink(link.getAttribute('href'));
+                });
+            });
+
+            document.querySelectorAll('a').forEach(function (link) {
+                if (link.textContent.trim() === 'Contactez-nous') {
+                    link.setAttribute('href', 'mailto:infomasten@gmail.com');
+                }
+            });
+
+            setActiveLink(window.location.hash || '#home');
+            window.addEventListener('hashchange', function () {
+                setActiveLink(window.location.hash || '#home');
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clinical Les Orangers - Dashboard Medecin</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#8ad0f1",
+              "secondary-container": "#98deff",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#f2f4f6",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#e6e8ea",
+              "outline-variant": "#c4c6d0",
+              "primary": "#001736",
+              "primary-fixed": "#d6e3ff",
+              "secondary": "#0d6683",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              "on-surface": "#191c1e",
+              "on-surface-variant": "#43474f",
+              "surface": "#f7f9fb"
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<nav class="fixed top-0 w-full z-50 bg-[#f7f9fb]/70 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-bold text-primary tracking-tighter">Clinical Les Orangers</div>
+<div class="flex items-center gap-4">
+<a class="text-primary/70 hover:text-secondary font-semibold transition-colors" href="index.html">Accueil</a>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-semibold transition-all inline-flex items-center justify-center" id="logout-button" type="button">Deconnexion</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 min-h-screen bg-surface overflow-hidden">
+<section class="relative py-12 lg:py-16">
+<div class="absolute inset-0 -z-10">
+<div class="absolute top-8 left-6 w-72 h-72 bg-secondary-container/40 rounded-full blur-[90px]"></div>
+<div class="absolute bottom-0 right-10 w-80 h-80 bg-primary-fixed/40 rounded-full blur-[110px]"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center py-20" id="dashboard-loading">
+<p class="text-on-surface-variant font-medium">Chargement du dashboard medecin...</p>
+</div>
+<p class="hidden text-center text-error font-medium py-8" id="dashboard-error"></p>
+<div class="hidden space-y-8" data-role="doctor" id="dashboard-root">
+<div class="bg-surface-container-lowest rounded-[2rem] border border-white/70 shadow-[0px_22px_48px_rgba(0,27,54,0.08)] p-8 lg:p-10">
+<span class="inline-block px-4 py-1.5 rounded-sm bg-secondary-fixed text-on-surface text-sm font-bold tracking-widest uppercase">Dashboard Medecin</span>
+<div class="mt-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
+<div class="space-y-4">
+<h1 class="text-4xl lg:text-5xl font-extrabold text-primary leading-[1.08] tracking-tight">Bienvenue <span id="profile-name">-</span></h1>
+<p class="text-lg text-on-surface-variant leading-relaxed">Publiez vos services, proposez vos disponibilites et gerez les demandes de rendez-vous des patients depuis un seul espace.</p>
+</div>
+<div class="grid sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-low rounded-3xl p-5">
+<p class="text-sm text-on-surface-variant mb-2">Specialite</p>
+<p class="text-xl font-bold text-primary" id="doctor-specialite">-</p>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-5">
+<p class="text-sm text-on-surface-variant mb-2">Telephone</p>
+<p class="text-xl font-bold text-primary" id="profile-phone">-</p>
+</div>
+<button class="sm:col-span-2 bg-primary text-on-primary px-6 py-4 rounded-3xl font-semibold transition-all inline-flex items-center justify-center gap-2 hover:shadow-xl shadow-primary/10" id="account-panel-toggle" type="button">
+Voir les informations du compte
+<span class="material-symbols-outlined text-base">badge</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid xl:grid-cols-[0.88fr_1.12fr] gap-8">
+<div class="space-y-8">
+<div class="bg-surface-container-lowest rounded-[2rem] border border-white/70 shadow-[0px_22px_48px_rgba(0,27,54,0.08)] p-8">
+<h2 class="text-2xl font-bold text-primary mb-6">Publier une prestation</h2>
+<form class="space-y-5" id="doctor-service-form">
+<div class="grid md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="service-prenom">Prenom</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3" id="service-prenom" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="service-nom">Nom</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3" id="service-nom" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="service-specialite">Specialite</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3" id="service-specialite" placeholder="Ex: Cardiologie" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="service-workdays">Jours de travail</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3" id="service-workdays" placeholder="Ex: Lundi, Mardi, Jeudi" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="service-slot-input">Ajouter les horaires disponibles</label>
+<div class="flex flex-col sm:flex-row gap-3">
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3" id="service-slot-input" type="time"/>
+<button class="px-6 py-3 rounded-xl bg-surface-container-high text-primary font-semibold" id="service-slot-add" type="button">Ajouter</button>
+</div>
+<p class="text-sm text-on-surface-variant">Ajoutez chaque horaire disponible un par un pour faciliter la reservation des patients.</p>
+<div class="flex flex-wrap gap-2 min-h-10" id="doctor-slot-list"></div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 px-8 rounded-full font-bold text-lg hover:shadow-xl shadow-primary/10 transition-all inline-flex items-center justify-center gap-2" type="submit">
+                  Publier la prestation
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+<p class="text-sm font-medium text-on-surface-variant" id="doctor-service-status"></p>
+</form>
+</div>
+<div class="bg-surface-container-lowest rounded-[2rem] border border-white/70 shadow-[0px_22px_48px_rgba(0,27,54,0.08)] p-8">
+<h2 class="text-2xl font-bold text-primary mb-6">Vos prestations publiees</h2>
+<div class="space-y-4" id="doctor-services-list"></div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="bg-surface-container-lowest rounded-[2rem] border border-white/70 shadow-[0px_22px_48px_rgba(0,27,54,0.08)] p-8">
+<div class="flex items-center justify-between gap-4 mb-6">
+<h2 class="text-2xl font-bold text-primary">Demandes de rendez-vous</h2>
+<span class="text-sm text-on-surface-variant">Accepter ou refuser chaque patient</span>
+</div>
+<p class="text-sm font-medium text-on-surface-variant mb-4" id="doctor-appointments-status"></p>
+<div class="space-y-4" id="doctor-appointments-list"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden fixed inset-0 z-[70] bg-primary/25 backdrop-blur-sm px-4 py-8 overflow-y-auto" id="account-panel">
+<div class="max-w-xl mx-auto bg-surface-container-lowest rounded-[2rem] border border-white/70 shadow-[0px_22px_48px_rgba(0,27,54,0.12)] p-8">
+<div class="flex items-center justify-between gap-4 mb-6">
+<div>
+<p class="text-sm font-semibold uppercase tracking-[0.18em] text-secondary">Compte</p>
+<h2 class="text-3xl font-bold text-primary">Informations du compte</h2>
+</div>
+<button class="w-12 h-12 rounded-full bg-surface-container-low text-primary inline-flex items-center justify-center" id="account-panel-close" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-5">
+<div>
+<p class="text-sm text-on-surface-variant">Email</p>
+<p class="text-lg font-semibold text-primary" id="profile-email">-</p>
+</div>
+<div>
+<p class="text-sm text-on-surface-variant">Ville</p>
+<p class="text-lg font-semibold text-primary" id="profile-city">-</p>
+</div>
+<div>
+<p class="text-sm text-on-surface-variant">Date de naissance</p>
+<p class="text-lg font-semibold text-primary" id="profile-birth">-</p>
+</div>
+<div>
+<p class="text-sm text-on-surface-variant">Message enregistre</p>
+<p class="text-lg font-semibold text-primary" id="doctor-message">Aucun message enregistre.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script type="module" src="./app-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clinical Les Orangers - Espace Patient</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#8ad0f1",
+                    "secondary-container": "#98deff",
+                    "tertiary": "#0e191c",
+                    "on-primary-container": "#7594ca",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-primary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "surface-bright": "#f7f9fb",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-fixed-variant": "#3d494c",
+                    "outline-variant": "#c4c6d0",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#001b3d",
+                    "on-secondary-container": "#056380",
+                    "on-secondary-fixed-variant": "#004d65",
+                    "secondary": "#0d6683",
+                    "tertiary-fixed-dim": "#bdc9cc",
+                    "surface-tint": "#405f91",
+                    "inverse-primary": "#a9c7ff",
+                    "on-tertiary-fixed": "#121d20",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "secondary-fixed": "#bee9ff",
+                    "inverse-surface": "#2d3133",
+                    "tertiary-fixed": "#d9e5e8",
+                    "tertiary-container": "#232e31",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#002b5b",
+                    "on-surface-variant": "#43474f",
+                    "primary-fixed": "#d6e3ff",
+                    "outline": "#747780",
+                    "on-error-container": "#93000a",
+                    "primary": "#001736",
+                    "on-primary-fixed-variant": "#264778",
+                    "on-secondary-fixed": "#001f2a",
+                    "background": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#a9c7ff",
+                    "on-surface": "#191c1e",
+                    "error": "#ba1a1a",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-container": "#8a9599"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<nav class="fixed top-0 w-full z-50 bg-[#f7f9fb]/70 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-2xl font-bold text-primary tracking-tighter">
+                Clinical Les Orangers
+            </div>
+<div class="flex items-center gap-4">
+<a class="text-primary/70 hover:text-secondary font-semibold transition-colors" href="role.html">Retour</a>
+<a class="bg-primary text-on-primary px-8 py-3 rounded-full font-semibold transition-all inline-flex items-center justify-center" href="index.html">
+                Accueil
+            </a>
+</div>
+</div>
+</nav>
+<main class="pt-20 min-h-screen bg-surface overflow-hidden">
+<section class="relative py-16 lg:py-24">
+<div class="absolute inset-0 -z-10">
+<div class="absolute top-12 left-6 w-72 h-72 bg-secondary-container/40 rounded-full blur-[90px]"></div>
+<div class="absolute bottom-0 right-10 w-80 h-80 bg-primary-fixed/40 rounded-full blur-[110px]"></div>
+</div>
+<div class="max-w-6xl mx-auto px-8">
+<div class="bg-surface-container-lowest rounded-[2rem] border border-white/70 shadow-[0px_22px_48px_rgba(0,27,54,0.08)] overflow-hidden">
+<div class="grid xl:grid-cols-[0.88fr_1.12fr]">
+<div class="p-8 lg:p-10 bg-gradient-to-br from-surface to-surface-container-low">
+<span class="inline-block px-4 py-1.5 rounded-sm bg-secondary-fixed text-on-secondary-fixed-variant text-sm font-bold tracking-widest uppercase">Espace Patient</span>
+<div class="space-y-4 mt-6">
+<h1 class="text-4xl lg:text-5xl font-extrabold text-primary leading-[1.08] tracking-tight">Creez votre compte patient</h1>
+<p class="text-base lg:text-lg text-on-surface-variant leading-relaxed">Accedez a un parcours simple pour demander un rendez-vous, partager vos informations et recevoir un suivi clair et rapide.</p>
+</div>
+</div>
+<div class="p-8 lg:p-10">
+<div class="flex items-center justify-between gap-4 mb-6">
+<div>
+<h2 class="text-3xl font-bold text-primary">Inscription</h2>
+<p class="text-on-surface-variant mt-2">Completez le formulaire ci-dessous.</p>
+</div>
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">person_add</span>
+</div>
+</div>
+<form class="space-y-5" id="patient-signup-form" method="post">
+<div class="grid md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="prenom">Prenom</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" id="prenom" name="prenom" placeholder="Votre prenom" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="nom">Nom</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" id="nom" name="nom" placeholder="Votre nom" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="naissance">Date de naissance</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" id="naissance" name="naissance" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="ville">Ville</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" id="ville" name="ville" placeholder="Ville de residence" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="telephone">Telephone</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" id="telephone" name="telephone" placeholder="+213 00 000 0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="email">Email</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" id="email" name="email" placeholder="patient@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="motdepasse">Mot de passe</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" id="motdepasse" name="motdepasse" placeholder="Entrez votre mot de passe" type="password"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="confirmation">Confirmation du mot de passe</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" id="confirmation" name="confirmation" placeholder="Confirmez votre mot de passe" type="password"/>
+</div>
+</div>
+<div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="groupe">Groupe sanguin</label>
+<select class="w-full min-h-[52px] bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all text-on-surface-variant" id="groupe" name="groupe">
+<option selected="" value="">Choisissez votre groupe sanguin</option>
+<option value="a+">A+</option>
+<option value="a-">A-</option>
+<option value="b+">B+</option>
+<option value="b-">B-</option>
+<option value="ab+">AB+</option>
+<option value="ab-">AB-</option>
+<option value="o+">O+</option>
+<option value="o-">O-</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant" for="message">Motif de la demande</label>
+<textarea class="w-full min-h-32 bg-surface-container-low border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all resize-none" id="message" name="message" placeholder="Ajoutez quelques informations sur votre besoin, vos symptomes ou votre demande de rendez-vous."></textarea>
+</div>
+</div>
+<label class="flex items-start gap-3 text-sm text-on-surface-variant bg-surface-container-low rounded-2xl px-4 py-4">
+<input class="mt-1 w-5 h-5 rounded-md border-outline-variant text-primary focus:ring-primary bg-surface-container-low" type="checkbox"/>
+<span>Je confirme que les informations saisies sont correctes et j'accepte d'etre recontacte par email.</span>
+</label>
+<button class="w-full bg-primary text-on-primary py-4 px-8 rounded-full font-bold text-lg hover:shadow-xl shadow-primary/10 transition-all inline-flex items-center justify-center gap-2" type="submit">
+                    Creer mon compte
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+<p class="text-sm font-medium text-on-surface-variant" id="patient-status"></p>
+</form>
+<div class="mt-6 text-center text-on-surface-variant">
+                Vous avez deja un compte ?
+<a class="text-secondary font-bold hover:text-primary transition-colors ml-1" href="login.html?role=patient">Se connecter</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script type="module" src="./app-auth.js"></script>
+</body>
+</html>
